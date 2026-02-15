@@ -36,8 +36,7 @@ class PawnGameService
     case cmd
     when :PLACE then place(args)
     when :MOVE then move(args[0])
-    when :LEFT then @pawn.rotate(:LEFT)
-    when :RIGHT then @pawn.rotate(:RIGHT)
+    when :LEFT, :RIGHT then rotate(cmd)
     when :REPORT then log("REPORT: #{@pawn.report}")
     end
   end
@@ -68,6 +67,11 @@ class PawnGameService
     else
       log("Invalid Moved: Out of boundry")
     end
+  end
+
+  def rotate(side)
+    @pawn.rotate(side)
+    log("Turned #{side}")
   end
 
   def log(message)
