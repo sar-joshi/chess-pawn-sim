@@ -20,9 +20,9 @@ class Pawn
     # calculate new position
     dx, dy = case facing
     when :NORTH then [ 0, 1 ]
-    when :SOUTH then [ 0, 1 ]
-    when :EAST then [ 0, 1 ]
-    when :WEST then [ 0, 1 ]
+    when :SOUTH then [ 0, -1 ]
+    when :EAST then [ 1, 1 ]
+    when :WEST then [ -1, 0 ]
     end
 
     { x: x + (dx * steps), y: y + (dy * steps) }

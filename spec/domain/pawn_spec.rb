@@ -10,15 +10,17 @@ describe Pawn do
       expect(new_position).to eq({ x: 0, y: 1 })
     end
 
-    # todo: failing for some reason
-    # it "should move South when facing South" do
-    #   pawn = Pawn.new(0, 5, "SOUTH", "WHITE")
-    #   expect(pawn.soft_move(1)).to eq({ x: 0, y: 3 })
-    # end
+    it "should move South when facing South" do
+      pawn = Pawn.new(0, 5, "SOUTH", "WHITE")
+      expect(pawn.soft_move(1)).to eq({ x: 0, y: 4 })
+    end
 
     it "should not mutate pawn's internal state" do
       pawn.soft_move(1)
       expect(pawn.y).to eq(0)
     end
   end
+
+  # descibe "#rotate" do
+  # end
 end
