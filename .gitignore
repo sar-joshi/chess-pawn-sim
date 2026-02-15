@@ -36,3 +36,7 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+# Ignore Sorbet/Tapioca generated RBI files (can be regenerated locally)
+/sorbet/rbi/gems/
+/sorbet/rbi/gems-path/
