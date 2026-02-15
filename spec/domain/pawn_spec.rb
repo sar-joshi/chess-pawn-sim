@@ -21,6 +21,27 @@ describe Pawn do
     end
   end
 
-  # descibe "#rotate" do
-  # end
+  describe "#rotate" do
+    it "should correctly rotate all facings" do
+      pawn = Pawn.new(0, 0, "SOUTH", "BLACK")
+
+      pawn.rotate(:LEFT) # EAST
+      pawn.rotate(:LEFT) # NORTH
+      pawn.rotate(:LEFT) # WEST
+      pawn.rotate(:LEFT) # SOUTH
+      expect(pawn.facing).to eq(:SOUTH)
+    end
+  end
+
+  describe "edge cases" do
+    it "should return current position when 0 step moved" do
+      pawn = Pawn.new(3, 4, "NORTH", "WHITE")
+      expect(pawn.soft_move(0)).to eq({ x: 3, y: 4 })
+    end
+
+    it "should cast string cooridainates to integer" do
+      pawn = Pawn.new("1", "2", "NORTH", "WHITE")
+      expect(pawn.soft_move(0)).to eq({ x: 1, y: 2 })
+    end
+  end
 end

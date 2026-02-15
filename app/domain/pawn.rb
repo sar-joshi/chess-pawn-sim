@@ -9,8 +9,8 @@ class Pawn
   }.freeze
 
   def initialize(x, y, facing, colour, has_moved = false)
-    @x = x
-    @y = y
+    @x = x.to_i
+    @y = y.to_i
     @facing = facing.to_sym
     @colour = colour.to_sym
     @has_moved = has_moved
