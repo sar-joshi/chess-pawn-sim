@@ -1,0 +1,3 @@
+<%= turbo_stream.update "game_log" do %>
+  <%= render partial: "log_entries", locals: {history: @game.history || []} %>
+<% end %>

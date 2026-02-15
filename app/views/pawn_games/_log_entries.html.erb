@@ -1,0 +1,9 @@
+<% if history.present? %>
+  <% history.reverse_each do |entry| %>
+    <div class="flex gap-1 animate-in fade-in slide-in-from-left-2 duration-200 text-sm">
+      <span class="<%= entry["message"].include?("REPORT") ? "text-green-400 font-bold" : "text-gray-700" %>">
+        <%= entry["message"] %>
+      </span>
+    </div>
+  <% end %>
+<% end %>

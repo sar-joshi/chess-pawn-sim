@@ -1,0 +1,21 @@
+<div class="max-w-xl mx-auto mt-10 p-6 bg-white shadow-xl rounded-xl border border-gray-100">
+  <h1 class="text-xl font-bold text-gray-800 mb-4">Pawn Simulator</h1>
+
+  <%= form_with url: pawn_games_path, method: :patch, data: { turbo_stream: true }, class: "space-y-4" do |f| %>
+    <%= f.text_area :commands, rows: 8, class: "w-full p-3 border rounded shadow-inner font-mono text-sm focus:ring-2 focus:ring-blue-500", placeholder: "PLACE 0,0,NORTH,WHITE\nMOVE\nLEFT\nREPORT..." %>
+    <%= f.submit "Submit", class: "w-full py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition" %>
+  <% end %>
+
+  <%= button_to "Reset Game", 
+      reset_pawn_games_path, 
+      method: :patch, 
+      class: "mt-2 w-full py-2 bg-red-700 text-white font-semibold rounded hover:bg-red-600 transition",
+      data: { turbo_confirm: "Are you sure?" } %>
+
+  <div class="mt-6">
+    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Result Log</h3>
+    <div id="game_log" class="max-h-64 overflow-y-auto border border-gray-200 rounded p-3 bg-gray-50">
+      <%= render partial: "log_entries", locals: { history: @game.history || [] } %>
+    </div>
+  </div>
+</div>
