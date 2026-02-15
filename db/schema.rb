@@ -15,6 +15,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_15_035130) do
     t.string "colour"
     t.datetime "created_at", null: false
     t.string "facing"
+    t.text "history"
     t.datetime "updated_at", null: false
     t.integer "xpos"
     t.integer "ypos"

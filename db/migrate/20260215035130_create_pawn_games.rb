@@ -5,7 +5,7 @@ class CreatePawnGames < ActiveRecord::Migration[8.1]
       t.integer :ypos
       t.string :facing
       t.string :colour
-      t.jsonb :history, default: []
+      t.text :history
 
       t.timestamps
     end
