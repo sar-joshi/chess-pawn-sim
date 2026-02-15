@@ -1,5 +1,3 @@
-# app/domain/board.rb
-
 class Board
   SIZE = 8 # board dimension
 
