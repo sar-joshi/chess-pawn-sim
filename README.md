@@ -4,25 +4,38 @@
 
 TODO: prep readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Initial Plannings:
+### Models
+- Board
+  - holds current board state
+  - validates pawn movements
+- Fields
+  - pawn_x
+  - pawn_y
+  - direction
+  - colour
 
-Things you may want to cover:
+### Service
+- Command Executor Service
+  - parse raw commands
+  - excercise domain logic on the Board model
+  - validate command and arguments
+  - ignore invalid commands
 
-* Ruby version
+### Controller
+- Board Controller
+  - executes commands
+  - render results
+  - resets the board state
 
-* System dependencies
+### Viewes
+- Single Board View
+  - textarea for command & arguments input
+  - buttons: submit and rest
+  - scrollable div: display result logs
+  - tailwindCss for css clases
+  - Turbo Stream for preventing page reload (TBC)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Test
+- pawn movement behaviour
+- edge cases: invalid commands, board boundry
