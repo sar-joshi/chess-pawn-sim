@@ -28,8 +28,9 @@ class Pawn
     { x: x + (dx * steps), y: y + (dy * steps) }
   end
 
-  def rotate(side) # left or right
-    @facing = ROTATIONS[side.to_sym][facing]
+  def rotate(side)
+    # sides: :LEFT or :RIGHT
+    @facing = ROTATIONS[side][facing]
   end
 
   def update_position(x, y)
