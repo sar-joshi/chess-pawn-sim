@@ -4,25 +4,49 @@
 
 TODO: prep readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Initial Plannings:
+### Models
+- ChessGame
+  - holds current pawn state
+  - history of commands/results
+- Potential Fields
+  - pawn_x integer
+  - pawn_y integer
+  - direction string
+  - colour string
+  - history json
+  - timestamps
 
-Things you may want to cover:
+### Domain Logics
+- Board
+  - own board properties: size
+  - ensures pawn is in bound
+- Pawn
+  - position: position (coordinates) on the board
+  - actions: movement, rotation
+  - rules: rules for actions
 
-* Ruby version
+### Service
+- Command Executor Service
+  - parse raw commands
+  - excercise domain logic on the Board model
+  - validate command and arguments
+  - ignore invalid commands
 
-* System dependencies
+### Controller
+- Board Controller
+  - executes commands
+  - render results
+  - resets the board state
 
-* Configuration
+### Viewes
+- Single Board View
+  - textarea for command & arguments input
+  - buttons: submit and rest
+  - scrollable div: display result logs
+  - tailwindCss for css clases
+  - Turbo Stream for preventing page reload (TBC)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Test
+- pawn movement behaviour
+- edge cases: invalid commands, board boundry
