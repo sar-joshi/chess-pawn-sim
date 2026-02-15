@@ -1,5 +1,6 @@
+# app/domain/board.rb
 
-class Board < ApplicationRecord
+class Board
   SIZE = 8 # board dimension
 
   # Check if Pawn's position is within the board boundaries.
