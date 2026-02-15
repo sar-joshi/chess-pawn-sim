@@ -54,8 +54,6 @@ class PawnGameService
   end
 
   def move(steps)
-    pawn = Pawn.new(@game.xpos, @game.ypos, @game.facing, @game.colour)
-
     max_steps = pawn.has_moved ? 1 : 2
     pawn_steps = [ steps.to_i, max_steps ].min # Ignore invalid steps
 
