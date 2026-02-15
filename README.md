@@ -6,14 +6,25 @@ TODO: prep readme
 
 Initial Plannings:
 ### Models
+- ChessGame
+  - holds current pawn state
+  - history of commands/results
+- Potential Fields
+  - pawn_x integer
+  - pawn_y integer
+  - direction string
+  - colour string
+  - history json
+  - timestamps
+
+### Domain Logics
 - Board
-  - holds current board state
-  - validates pawn movements
-- Fields
-  - pawn_x
-  - pawn_y
-  - direction
-  - colour
+  - own board properties: size
+  - ensures pawn is in bound
+- Pawn
+  - position: position (coordinates) on the board
+  - actions: movement, rotation
+  - rules: rules for actions
 
 ### Service
 - Command Executor Service
