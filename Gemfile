@@ -52,6 +52,19 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Ruby Language Server for Rails [https://github.com/ruby-lsp/ruby-lsp-rails]
+  gem "ruby-lsp-rails", require: false
+
+  # RSpec for testing [https://rspec.info/]
+  gem "rspec-rails", "~> 8.0", require: false
+
+  # Sorbet for static type checking [https://sorbet.org/]
+  gem "sorbet"
+  gem 'sorbet-runtime'
+
+  # Tapioca for generating Sorbet RBI files for Rails applications. [https://github.com/Shopify/tapioca]
+  gem "tapioca", "~> 0.17", require: false
 end
 
 group :development do
