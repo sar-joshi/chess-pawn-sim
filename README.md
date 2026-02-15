@@ -1,1 +1,1 @@
-# chess-pawn-sim
+# WeGuide - The Pawn Simulator
