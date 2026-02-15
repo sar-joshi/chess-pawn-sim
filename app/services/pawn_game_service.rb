@@ -54,15 +54,17 @@ class PawnGameService
   end
 
   def move(steps)
+    actual_steps = steps.nil? ? 1 : steps.to_i
     max_steps = @pawn.has_moved ? 1 : 2
-    pawn_steps = [ steps.to_i, max_steps ].min # Ignore invalid steps
+    allowed_steps = [ actual_steps, max_steps ].min # Ignore invalid steps
 
-    dx, dy = @pawn.soft_move(pawn_steps)
+    new_pos = @pawn.soft_move(allowed_steps)
+    dx, dy = new_pos[:x], new_pos[:y]
 
     # prevet pawn to fall off the board
     if @board.position_in_bound?(dx, dy)
       @pawn.update_position(dx, dy)
-      log("Moved to #{dx},#{dy} from #{pawn.x},#{pawn.y}")
+      log("Moved to #{dx},#{dy}")
     else
       log("Invalid Moved: Out of boundry")
     end
