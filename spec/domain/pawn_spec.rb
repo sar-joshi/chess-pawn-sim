@@ -5,7 +5,8 @@ describe Pawn do
   let(:pawn) { Pawn.new(0, 0, "NORTH", "WHITE") }
 
   describe '#soft_move' do
-    it "should calculate correct position based on given facing" do
+    it "should calculate correct position when facing North" do
+      pawn = Pawn.new(0, 0, "NORTH", "WHITE")
       new_position = pawn.soft_move(1)
       expect(new_position).to eq({ x: 0, y: 1 })
     end
@@ -13,6 +14,16 @@ describe Pawn do
     it "should move South when facing South" do
       pawn = Pawn.new(0, 5, "SOUTH", "WHITE")
       expect(pawn.soft_move(1)).to eq({ x: 0, y: 4 })
+    end
+
+    it "should move East when facing East" do
+      pawn = Pawn.new(2, 3, "EAST", "WHITE")
+      expect(pawn.soft_move(1)).to eq({ x: 3, y: 3 })
+    end
+
+    it "should move West when facing West" do
+      pawn = Pawn.new(5, 3, "WEST", "WHITE")
+      expect(pawn.soft_move(1)).to eq({ x: 4, y: 3 })
     end
 
     it "should not mutate pawn's internal state" do
