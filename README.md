@@ -7,9 +7,9 @@ A Ruby on Rails 8 application that simulates a chess pawn moving on an 8x8 chess
 ## Getting Started
 
 ### Prerequisites
-Ruby 3.4.1
-SQLite3
-Bundler
+- Ruby 3.4.1
+- SQLite3
+- Bundler
 
 ### Installation
 
