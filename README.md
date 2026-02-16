@@ -4,6 +4,30 @@
 
 A Ruby on Rails 8 application that simulates a chess pawn moving on an 8x8 chess board.
 
+### Project Structure
+
+```bash
+app/
+├── models/
+│   └── `pawn_game.rb`
+├── domain/
+│   └── `board.rb`, `pawn.rb`
+├── services/
+│   └── `pawn_game_service.rb`
+├── controllers/
+│   └── `pawn_games_controller.rb`
+└── views/
+    └── pawn_games/
+        └── `show.html.erb`, `update.turbo_stream.erb`, `reset.turbo_stream.erb`, `_log_entries.html.erb`
+spec/
+├── domain/
+│   └── `pawn_spec.rb`, `board_spec.rb`
+└── services/
+    └── `pawn_game_service_spec.rb`
+config/
+└── `routes.rb`
+```
+
 ## Getting Started
 
 ### Prerequisites
