@@ -85,7 +85,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.23.0)
       msgpack (~> 1.2)
-    brakeman (8.0.2)
+    brakeman (8.0.4)
       racc
     builder (3.3.0)
     bundler-audit (0.9.3)
@@ -117,8 +117,6 @@ GEM
       tzinfo
     ffi (1.17.3-aarch64-linux-gnu)
     ffi (1.17.3-aarch64-linux-musl)
-    ffi (1.17.3-arm-linux-gnu)
-    ffi (1.17.3-arm-linux-musl)
     ffi (1.17.3-x86_64-darwin)
     ffi (1.17.3-x86_64-linux-gnu)
     ffi (1.17.3-x86_64-linux-musl)
@@ -196,10 +194,6 @@ GEM
     nokogiri (1.19.0-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.0-aarch64-linux-musl)
-      racc (~> 1.4)
-    nokogiri (1.19.0-arm-linux-gnu)
-      racc (~> 1.4)
-    nokogiri (1.19.0-arm-linux-musl)
       racc (~> 1.4)
     nokogiri (1.19.0-x86_64-darwin)
       racc (~> 1.4)
@@ -382,8 +376,6 @@ GEM
       thor (>= 0.19.2)
     sqlite3 (2.9.0-aarch64-linux-gnu)
     sqlite3 (2.9.0-aarch64-linux-musl)
-    sqlite3 (2.9.0-arm-linux-gnu)
-    sqlite3 (2.9.0-arm-linux-musl)
     sqlite3 (2.9.0-x86_64-darwin)
     sqlite3 (2.9.0-x86_64-linux-gnu)
     sqlite3 (2.9.0-x86_64-linux-musl)
@@ -456,8 +448,6 @@ PLATFORMS
   aarch64-linux
   aarch64-linux-gnu
   aarch64-linux-musl
-  arm-linux-gnu
-  arm-linux-musl
   x86_64-darwin-21
   x86_64-linux
   x86_64-linux-gnu
